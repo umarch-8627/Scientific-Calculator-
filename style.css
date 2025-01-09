@@ -1,0 +1,113 @@
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #ffffff; /* Set the background color to white */
+    overflow: hidden;
+    color: #000; /* Change the text color to black for better contrast */
+}
+
+/* Title */
+.hero h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #1dd1a1, 0 0 30px #10ac84;
+}
+
+.hero .animated-name {
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #ff9f43, #1dd1a1, #f368e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: name-glow 5s infinite linear;
+}
+
+/* Calculator Styling */
+.calculator {
+    width: 350px;
+    background: linear-gradient(145deg, #252e44, #1e2638);
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px #aaa, -5px -5px 20px #fff;
+    animation: calculator-fadein 1.5s ease-out;
+}
+
+.calculator input {
+    width: 100%;
+    height: 70px;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 15px;
+    text-align: right;
+    background: linear-gradient(to right, #1d2733, #121722);
+    color: #fcf869;
+    padding: 10px;
+    box-shadow: inset 5px 5px 10px #0d141e, inset -5px -5px 10px #30384e;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+button {
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #2b3e50, #1c2c3b);
+    box-shadow: 4px 4px 8px #aaa, -4px -4px 8px #fff;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #29d2ac;
+}
+
+button.clear {
+    background: linear-gradient(to right, #fc5c7d, #ff0844);
+}
+
+button.equals {
+    background: linear-gradient(to right, #1dd1a1, #10ac84);
+}
+
+button.operator {
+    background: linear-gradient(to left, #ff9f43, #f368e0);
+}
+
+@keyframes name-glow {
+    0% {
+        text-shadow: 0 0 15px #ff9f43;
+    }
+    50% {
+        text-shadow: 0 0 25px #1dd1a1;
+    }
+    100% {
+        text-shadow: 0 0 15px #f368e0;
+    }
+}
+
+@keyframes calculator-fadein {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
